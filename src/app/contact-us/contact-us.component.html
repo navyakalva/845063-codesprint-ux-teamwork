@@ -1,0 +1,39 @@
+
+        <form [formGroup]="contactusform" (ngSubmit)="onSubmit()">
+            <h1 style="font-style:italic">Contact us</h1>
+              <table>
+                  <tr>
+                      <td>Name</td>
+                      <td>
+                        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required"></div>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Comment
+                      </td>
+                      <td>
+                        <input type="text" formControlName="comment" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.comment.errors }" />
+                        <div *ngIf="submitted && f.comment.errors" class="invalid-feedback">
+                            <div *ngIf="f.comment.errors.required"></div>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <button (click)="onSubmit()">Submit</button>
+                      </td>
+                  </tr>
+              </table>
+                
+        
+                                
+        
+        
+        </form>
+        
+        
+     

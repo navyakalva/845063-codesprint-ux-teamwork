@@ -1,0 +1,41 @@
+<header>
+   <h1>GiftCard</h1>
+</header>
+<nav>
+    <a [routerLink]="['/Index']">Home</a>
+    <a [routerLink]="['placegiftcard']">Place GiftCard Order</a>
+    <a [routerLink]="['vieworder']">View GiftCard Order</a>
+    <a [routerLink]="['contact-us']">Contact Us</a>
+    
+</nav>
+<main>
+    <aside>
+
+
+        <ul>
+            <li><a [routerLink]="['Index']">Home</a></li>
+            <li><a [routerLink]="['placegiftcard']">Place GiftCard Order</a></li>
+            <li><a [routerLink]="['vieworder']">View GiftCard Order</a></li>
+            <li><a [routerLink]="['contact-us']">Contact Us</a></li>
+            <button value="Place Order" style="color:forestgreen"><a [routerLink]="['placegiftcard']" style="color:red">Place Order</a></button>
+
+        </ul>
+
+
+    </aside>
+    <section style="background-color:cyan;">
+
+        <p>WELCOME</p>
+        <!-- <button value="Place Order" style="color:forestgreen"><a [routerLink]="['placegiftcard']" style="color:red">Place Order</a></button> -->
+        <router-outlet></router-outlet>
+        
+       
+        
+    </section>
+
+   
+</main>
+<!-- <footer>
+    &copy; All Rights Reserved 2017
+</footer>
+  -->
